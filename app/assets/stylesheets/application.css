@@ -69,7 +69,6 @@ td {
   gap: 15px;
 }
 
-
 /* Clear floats after the columns */
 .row::after {
   content: "";
