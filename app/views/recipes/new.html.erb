@@ -1,0 +1,19 @@
+
+<div>
+ <%= form_with model: @recipe, url: recipes_path, method: :post, local: true do |form| %>
+
+ <%= form.label :name, 'Name' %> <br/><br/>
+ <%= form.text_field :name %> <br/><br/>
+
+ <%= form.label :preparation_time, 'Preparation time in Hour' %> <br/><br/>
+ <%= form.number_field :preparation_time %> <br/><br/>
+
+ <%= form.label :cooking_time, 'Cooking time in Hour' %> <br/><br/>
+ <%= form.number_field :cooking_time %> <br/><br/>
+
+ <%= form.label :description, 'Description' %> <br/><br/>
+ <%= form.text_area :description, size: "70x5"  %> <br/><br/>
+
+  <%= form.submit %> <br/>
+<% end %>
+</div>

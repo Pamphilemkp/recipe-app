@@ -1,0 +1,41 @@
+     
+<div class="recipe-container">     
+     <h2>Recipe <%= @recipe.id %> :  <%= @recipe.name %> </h2>
+
+  <div class="recipe-detail">
+    <div class="recipes-side">
+     <p>Preparation time:   <%= @recipe.preparation_time %> 
+          <% if @recipe.preparation_time > 1 %>
+               <%= 'hours '%> 
+          <% else %> 
+               <%= 'hour'%>
+          <% end %>
+      </p>
+
+     <p>Cooking time:   <%= @recipe.cooking_time %>
+       <% if @recipe.cooking_time > 1 %>
+               <%= 'hours'%> 
+          <% else %> 
+               <%= 'hour'%>
+          <% end %>
+     </p>
+
+     <p>Steps go here ...</p>
+   </div>
+
+     <div class="recipes-public">
+     <p>Public</p>
+      <label class="switch ">
+          <input type="checkbox">
+          <span class="slider round"></span>
+     </label>
+     </div>
+
+  </div>
+
+ <div class="generate-buttons">
+   <p><%= link_to 'Generate shopping list', recipes_path(@recipe), class: "shopping-list" %></p>
+   <p><%= link_to 'Add ingredient', recipes_path(@recipe), class: "add-ingredient" %></p>
+ </div>
+ <hr>
+<div>    
