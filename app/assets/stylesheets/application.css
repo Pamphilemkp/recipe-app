@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
 .recipes {
   display: flex;
   gap: 50px;
@@ -123,7 +123,7 @@ input:checked + .slider::before {
   -webkit-transform: translateX(22px);
   -ms-transform: translateX(22px);
   transform: translateX(22px);
-  }
+}
 
 * {
   box-sizing: border-box;
