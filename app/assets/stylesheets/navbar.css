@@ -1,0 +1,23 @@
+.nav-style {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 90vw;
+}
+
+.nav-class {
+  background-color: aquamarine;
+}
+
+.nav-style-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 20vw;
+  padding: 10px;
+}
+
+.text-blue {
+  text-decoration: none;
+  font-size: 18px;
+}

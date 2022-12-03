@@ -1,9 +1,15 @@
-<h1>New recipefood</h1>
+<h1>Add ingredient to <%=@recipe.name %> </h1>
+ <%# # Showing error messages for failures with flash %> 
+  <% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 
 <%= render "form", recipefood: @recipefood %>
 
 <br>
 
 <div>
-  <%= link_to "Back to recipefoods", recipefoods_path %>
+  <%= link_to "Back to recipefoods", recipe_path(@recipe.id) %>
 </div>

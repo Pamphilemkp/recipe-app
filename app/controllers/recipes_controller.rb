@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @recipefoods = Recipefood.where(recipe_id: @recipe.id).includes(:food)
   end
 
   def new
@@ -32,9 +33,13 @@ class RecipesController < ApplicationController
     redirect_to recipe_path
   end
 
+  def public
+    @public_recipes = Recipe.where(public: true).order('created_at DESC').includes(:user, :recipefoods)
+  end
+
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description)
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
   end
 end

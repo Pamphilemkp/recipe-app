@@ -1,6 +1,6 @@
      
 <div class="recipe-container">     
-     <h2>Recipe <%= @recipe.id %> :  <%= @recipe.name %> </h2>
+     <h2>Recipe <%= @recipe.id %> :  <%= @recipe.name.capitalize %> </h2>
 
   <div class="recipe-detail">
     <div class="recipes-side">
@@ -34,8 +34,31 @@
   </div>
 
  <div class="generate-buttons">
-   <p><%= link_to 'Generate shopping list', recipes_path(@recipe), class: "shopping-list" %></p>
-   <p><%= link_to 'Add ingredient', recipes_path(@recipe), class: "add-ingredient" %></p>
+   <p><%= link_to 'Generate shopping list', recipe_general_shopping_list_index_path(@recipe), class: "shopping-list" %></p>
+   <p><%= link_to 'Add ingredient', new_recipe_recipefood_path(@recipe), class: "add-ingredient" %></p>
  </div>
  <hr>
-<div>    
+
+<div>
+     
+</div>
+     <table>
+       <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Actions</th>
+      </tr>
+     
+     <% @recipefoods.each do |recipefood| %>
+     <tr>
+       <td> <%= recipefood.food.name%> </td>
+       <td> <%= recipefood.quantity %> </td>
+       <td> <%= recipefood.quantity * recipefood.food.price %>$ </td>
+       <td> <%= link_to 'Modify', recipes_path(@recipe), class: "edit-link" %>  <%= link_to 'Remove', recipe_recipefood_path(@recipe, recipefood),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "remove-link" %></td>
+     </tr>
+     <% end %>
+     
+     </table>
+</div>    

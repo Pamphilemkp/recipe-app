@@ -1,17 +1,38 @@
-
+<%# # Showing error messages for validations %> 
 <div>
+  <% if @recipe.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@recipe.errors.count, "error") %> Please make sure you follow these requirements:</h2>
+      <ul>
+        <% @recipe.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <%# # Showing error messages for failures with flash %> 
+  <% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
  <%= form_with model: @recipe, url: recipes_path, method: :post, local: true do |form| %>
 
- <%= form.label :name, 'Name' %> <br/><br/>
+ <%= form.label :name, 'Name' %> <br/>
  <%= form.text_field :name %> <br/><br/>
 
- <%= form.label :preparation_time, 'Preparation time in Hour' %> <br/><br/>
+ <%= form.label :preparation_time, 'Preparation time in Hour' %> <br/>
  <%= form.number_field :preparation_time %> <br/><br/>
 
- <%= form.label :cooking_time, 'Cooking time in Hour' %> <br/><br/>
+ <%= form.label :cooking_time, 'Cooking time in Hour' %> <br/>
  <%= form.number_field :cooking_time %> <br/><br/>
 
- <%= form.label :description, 'Description' %> <br/><br/>
+ <%= form.label :public, 'Public' %>
+ <%= form.check_box :public %> <br/><br/>
+
+ <%= form.label :description, 'Description' %> <br/>
  <%= form.text_area :description, size: "70x5"  %> <br/><br/>
 
   <%= form.submit %> <br/>
