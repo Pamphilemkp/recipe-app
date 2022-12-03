@@ -1,20 +1,20 @@
 <div class="recipes-container">
 
-  <p class="new-recipe"> <%= link_to 'Add new recipe', new_recipe_path %> </p>
+  <p > <%= link_to 'Add new recipe', new_recipe_path,class: "new-recipe" %> </p>
   
     <% @recipes.each do |recipe| %>
     <div class="recipes">
       <p class="recipes-remove">
-      <%= link_to "#{recipe.name}", recipe_path(recipe) %>
+      <%= link_to "#{recipe.name}", recipe_path(recipe),class:"recipe-name"  %>
 
       <% if can? :delete, recipe %>
-       <%= link_to 'Remove', recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+       <%= link_to 'Remove', recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},class: "remove-button" %>
       <% end %>
 
      </p>
      <div class="description">
-        <p> Description for recipe <%= recipe.name %> </p>
-        <p> <%= recipe.description %> </p>
+        <p class="d-detail"> Description for recipe <%= recipe.name %> </p>
+        <p class="d-detail"> <%= recipe.description %> </p>
      </div>
     </div>
     <% end %>

@@ -1,19 +1,38 @@
 
-<div>
+
  <%= form_with model: @recipe, url: recipes_path, method: :post, local: true do |form| %>
+<div class="container-recipe">
+       <div class="row">
+         <div class="col-25">
+            <%= form.label :name, 'Name' %> 
+         </div>
+       <div class="col-75">
+           <%= form.text_field :name %> 
+      </div>
+     <div class="row">
+         <div class="col-25">
+             <%= form.label :preparation_time, 'Preparation time in Hour' %> 
+          </div>
+          <div class="col-75">
+               <%= form.number_field :preparation_time %> 
+            </div>
+        <div class="row">
+         <div class="col-25">
+            <%= form.label :cooking_time, 'Cooking time in Hour' %> 
+          </div>
+            <div class="col-75">
+               <%= form.number_field :cooking_time %> 
+            </div>
+       <div class="row">
+         <div class="col-25">
+         <%= form.label :description, 'Description' %> 
+         </div>
+           <div class="col-75">
+            <%= form.text_area :description, size: "70x5"  %> 
+            </div>
+       <div class="row-recipe">
+           <%= form.submit%> 
+        </div>
 
- <%= form.label :name, 'Name' %> <br/><br/>
- <%= form.text_field :name %> <br/><br/>
-
- <%= form.label :preparation_time, 'Preparation time in Hour' %> <br/><br/>
- <%= form.number_field :preparation_time %> <br/><br/>
-
- <%= form.label :cooking_time, 'Cooking time in Hour' %> <br/><br/>
- <%= form.number_field :cooking_time %> <br/><br/>
-
- <%= form.label :description, 'Description' %> <br/><br/>
- <%= form.text_area :description, size: "70x5"  %> <br/><br/>
-
-  <%= form.submit %> <br/>
+  </div>
 <% end %>
-</div>
