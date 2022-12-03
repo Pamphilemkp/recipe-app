@@ -1,5 +1,5 @@
 <nav class="nav-class">
-    <h1>Shopping recipes app</h1>
+    <h1 class="Heading">Shopping recipes app</h1>
 <div class="nav-style">
  <div class="nav-style-links">
     <% if current_user %>
@@ -7,7 +7,7 @@
     <%= link_to "Foods", foods_path, class: "text-blue" %>
   <% end %>
 
-  <%= link_to "Public Recipes", "/public_recipes", class: "public-recipes-nav text-blue " %>
+  <%= link_to "Public Recipes", "/public_recipes", class: "active"  %>
  </div>
 
 

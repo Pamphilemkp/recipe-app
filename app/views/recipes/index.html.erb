@@ -5,16 +5,16 @@
     <% @recipes.each do |recipe| %>
     <div class="recipes">
       <p class="recipes-remove">
-      <%= link_to "#{recipe.name.capitalize}", recipe_path(recipe), class: "names"  %>
+      <%= link_to "#{recipe.name.capitalize}", recipe_path(recipe), class:"recipe-name"  %>
 
       <% if can? :delete, recipe %>
-       <%= link_to 'Remove', recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "remove-link" %>
+       <%= link_to 'Remove', recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "remove-button"%>
       <% end %>
 
      </p>
      <div class="description">
-        <p> Description for recipe <%= recipe.name.capitalize %> </p>
-        <p> <%= recipe.description %> </p>
+        <p class="d-detail"> Description for recipe <%= recipe.name.capitalize %> </p>
+        <p class="d-detail"> <%= recipe.description %> </p>
      </div>
     </div>
     <% end %>
