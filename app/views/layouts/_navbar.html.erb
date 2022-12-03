@@ -1,0 +1,26 @@
+<nav class="nav-class">
+    <h1>Shopping recipes app</h1>
+<div class="nav-style">
+ <div class="nav-style-links">
+    <% if current_user %>
+    <%= link_to "Recipes", recipes_path, class: "text-blue" %>
+    <%= link_to "Foods", foods_path, class: "text-blue" %>
+  <% end %>
+
+  <%= link_to "Public Recipes", "/public_recipes", class: "public-recipes-nav text-blue " %>
+ </div>
+
+
+<div>
+    <% if current_user %>
+      <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "destroy-session text-blue" %>
+    <% else %>
+      <% if current_page?(new_user_session_path) %>
+        <%= link_to "Sign up", new_user_registration_path, class: "signup text-blue " %>
+      <% elsif current_page?(new_user_registration_path) %>
+        <%= link_to "Sign in", new_user_session_path, class: "signin text-blue" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+</nav>

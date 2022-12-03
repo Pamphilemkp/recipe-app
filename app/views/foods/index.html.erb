@@ -13,10 +13,10 @@
     </tr>
     <% @foods.each do |food| %>
     <tr>
-    <td><%= food.name %></td>
+    <td><%= food.name.capitalize %></td>
     <td><%= food.measurement_unit %></td>
     <td><%= food.price %></td>
-    <td><%= link_to "Delete" , food, data: { turbo_method: :delete,turbo_confirm: 'are you sure to delete?'}%></td>
+    <td><%= link_to "Delete" , food, data: { turbo_method: :delete,turbo_confirm: 'are you sure to delete?'}, class: "remove-link" %></td>
     <tr>
      <% end %>
     </table>

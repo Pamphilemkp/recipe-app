@@ -1,0 +1,22 @@
+
+<div class="public-class">
+<h2>Public recipes </h2>
+  <% @public_recipes.each do |public_recipe| %>
+  <div class="public-container">
+    <div class="public-details">
+      <p> <strong> <%= link_to "#{public_recipe.name.capitalize}", recipe_path(public_recipe.id), class: "names" %> </strong> </p>
+      <p>By: <%= public_recipe.user.name.capitalize %> </p>
+    </div>
+
+    <div class="public-prices">
+      <p> Total food items: <%= public_recipe.recipefoods.length %> </p>
+        
+   <p> Total price: $  <% public_recipe.recipefoods.includes(:food).map do |recipefood| %>
+          <%= recipefood.food.price * recipefood.quantity %>
+          <% end %>
+    </p>
+
+    </div>
+  </div>
+  <% end %>
+</div>
