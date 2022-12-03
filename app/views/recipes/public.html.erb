@@ -11,9 +11,7 @@
     <div class="public-prices">
       <p> Total food items: <%= public_recipe.recipefoods.length %> </p>
         
-   <p> Total price: $  <% public_recipe.recipefoods.includes(:food).map do |recipefood| %>
-          <%= recipefood.food.price * recipefood.quantity %>
-          <% end %>
+   <p> Total price: $ <%= @totals[public_recipe.id] %>
     </p>
 
     </div>
