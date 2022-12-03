@@ -13,17 +13,25 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :quantity, style: "display: block" %>
-    <%= form.number_field :quantity %>
-  </div>
+ <div class="container-login">
+        <div class="row">
+          <div class="col-25">
+              <%= form.label :quantity, style: "display: block" %>
+           <div class="col-75">
+             <%= form.number_field :quantity %>
+           </div>
+          </div>
 
-  <div>
-    <%= form.label :food_id, "Food"%> <br/>
-    <%= form.collection_select(:food_id, @foods, :id, :name) %>
-  </div>
-
-  <div>
-    <%= form.submit "Add ingredient" %>
-  </div>
+  <div class="col-75">
+          <div class="col-25">
+             <%= form.label :food_id, "Food"%> 
+          </div>
+            <div class="col-75">
+               <%= form.collection_select(:food_id, @foods, :id, :name) %>
+           </div>
+     </div>
+       <div class="col-75">
+             <%= form.submit "Add ingredient" %>
+      </div>
+    </div>
 <% end %>
