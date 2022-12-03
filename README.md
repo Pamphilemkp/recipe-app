@@ -1,37 +1,49 @@
-# curriculum-databases-projects-template
+# rails recipe app
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> This an app to creae and manage recipes.
 
+## Built With
+
+- Ruby on Rails
+- PostgreSQL
 
 ## Getting Started
 
-This repository includes files with plain SQL that can be used to recreate a database:
+To get a local copy up and running follow these simple example steps.
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+### Prerequisites
 
+- Ruby on Rails
+- Rspec
 
-## Authors
+### Install
 
-👤 **Author1**
+1. Go to the terminal and `cd` into the directory of your preference.
+2. Run `git@github.com:alphayowakarindi/rails-recipe-app.git` to clone the app.
+3. Run `rails s` to start the app and it will automatically open in your default browser.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+### Run test
+1. For rails run `rubocop --color`
+2. For style run  `npx stylelint "**/*.{css,scss}"`
 
-👤 **Author2**
+## 👥 Authors <a name="authors"></a>
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Basit Ali**
+
+- GitHub: [@githubhandle](https://github.com/basitali111)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/basit-ali-jobs/)
+- Twitter: [Twitter](https://twitter.com/BasitAl35031734)
+
+👤 **Pamphile Mkp**
+
+- GitHub: [@githubhandle](https://github.com/pamphilemkp)
+- Twitter:[@pamphilemkp](https://Twitter.com/PamphileMusonda)
+- LinkedIn:[@pamphilemkp](https://www.linkedin.com/in/pamphile-musonda)
 
 ## 🤝 Contributing
-
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/alphayowakarindi/rails-recipe-app/issues). 
 
 ## Show your support
 

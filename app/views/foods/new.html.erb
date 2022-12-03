@@ -1,0 +1,67 @@
+<%# # Showing error messages for validations %>
+<%= form_with model: @food , url: foods_path do |form| %>
+
+
+  <% if @food.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@food.errors.count, "error") %> Please make sure to follow these requirements:</h2>
+
+      <ul>
+        <% @food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+ <%# # Showing error messages for failures with flash %> 
+  <% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<div class="container">
+    <h1> Food Form</h1>
+   <div class="row">
+       <div class="col-25">
+            <%=form.label :name%>
+       </div>
+        <div class="col-75">
+             <%=form.text_field :name%>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-25">
+           <%=form.label :measurement_unit%>
+        </div>
+       <div class="col-75">
+        <%=form.text_field :measurement_unit%>
+        </div>
+      </div>
+
+
+     <div class="row">
+        <div class="col-25">
+             <%= form.label :quantity %>
+        </div>
+       <div class="col-75">
+             <%= form.number_field :quantity %>
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="col-25">
+             <%= form.label :price %>
+        </div>
+       <div class="col-75">
+             <%= form.number_field :price %>
+        </div>
+    </div>
+
+ <div class="row">
+    <%= form.submit %>
+    </div>
+</div>
+<%end%>

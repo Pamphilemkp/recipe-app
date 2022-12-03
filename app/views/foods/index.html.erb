@@ -1,0 +1,25 @@
+<div>
+
+
+<span class="new-food"><%= link_to "Add Food", new_food_path,class: "Add-food" %></span>
+
+<div id="foods">
+    <table class="food-table">
+    <tr>
+    <th>Food</th>
+    <th>Measurement unit</th>
+    <th>Unit price</th>
+    <th>Actions</th>
+    </tr>
+    <% @foods.each do |food| %>
+    <tr>
+    <td><%= food.name.capitalize %></td>
+    <td><%= food.measurement_unit %></td>
+    <td><%= food.price %></td>
+    <td><%= link_to "Delete" , food, data: { turbo_method: :delete,turbo_confirm: 'are you sure to delete?'}, class: "remove-link" %></td>
+    <tr>
+     <% end %>
+    </table>
+
+</div>
+</div>

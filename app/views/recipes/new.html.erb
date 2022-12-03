@@ -1,0 +1,70 @@
+<%# # Showing error messages for validations %> 
+<div>
+  <% if @recipe.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@recipe.errors.count, "error") %> Please make sure you follow these requirements:</h2>
+      <ul>
+        <% @recipe.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <%# # Showing error messages for failures with flash %> 
+  <% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+ <%= form_with model: @recipe, url: recipes_path, method: :post, local: true do |form| %>
+  <div class="container-login">
+    <div class="center-recipe">
+        <div class="row">
+          <div class="col-25">
+               <%= form.label :name, 'Name' %> 
+          </div>
+        <div class="col-75">
+              <%= form.text_field :name %> 
+          </div>
+      </div>
+  <div class="row">
+          <div class="col-25">
+        <%= form.label :preparation_time, 'Preparation time in Hour' %> 
+      </div>
+       <div class="col-75">
+           <%= form.number_field :preparation_time %> 
+        </div>
+  </div>
+   <div class="row">
+          <div class="col-25">
+            <%= form.label :cooking_time, 'Cooking time in Hour' %> 
+          </div>
+          <div class="col-75">
+             <%= form.number_field :cooking_time %> 
+          </div>
+      </div>
+     <div class="row">
+          <div class="col-25">
+            <%= form.label :public, 'Public' %>
+          </div>
+           <div class="col-75">
+             <%= form.check_box :public %> 
+            </div>
+       </div>
+
+              <div class="row">
+                  <div class="col-25">
+                       <%= form.label :description, 'Description' %> <br/>
+                    </div>
+                  <div class="col-75">
+                    <%= form.text_area :description, size: "27x5"  %> <br/><br/>
+                  </div>
+               </div>
+            <div>
+               <div class="row">
+           <%= form.submit %> <br/>
+            </div>
+<% end %>
+</div>
