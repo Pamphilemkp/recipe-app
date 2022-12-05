@@ -30,9 +30,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Pamphile Mkp**
 
-- GitHub: [github](https://github.com/pamphilemkp)
-- Twitter:[@pamphilemkp](https://Twitter.com/PamphileMusonda)
-- LinkedIn:[@pamphilemkp](https://www.linkedin.com/in/pamphile-musonda)
+- GitHub:   [@pamphilemkp](https://github.com/pamphilemkp)
+- Twitter:  [@pamphilemkp](https://Twitter.com/PamphileMusonda)
+- LinkedIn: [@pamphilemkp](https://www.linkedin.com/in/pamphile-musonda)
 
 👤 **Basit Ali**
 
