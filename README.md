@@ -1,6 +1,6 @@
-# rails recipe app
+# RECIPE APP
 
-> This an app to creae and manage recipes.
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 ## Built With
 
@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple example steps.
 ### Install
 
 1. Go to the terminal and `cd` into the directory of your preference.
-2. Run `git@github.com:alphayowakarindi/rails-recipe-app.git` to clone the app.
+2. Run `git@github.com:pamphilemkp/recipe-app.git` to clone the app.
 3. Run `rails s` to start the app and it will automatically open in your default browser.
 
 ### Run test
@@ -28,17 +28,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Pamphile Mkp**
+
+- GitHub: [github](https://github.com/pamphilemkp)
+- Twitter:[@pamphilemkp](https://Twitter.com/PamphileMusonda)
+- LinkedIn:[@pamphilemkp](https://www.linkedin.com/in/pamphile-musonda)
+
 👤 **Basit Ali**
 
 - GitHub: [@githubhandle](https://github.com/basitali111)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/basit-ali-jobs/)
 - Twitter: [Twitter](https://twitter.com/BasitAl35031734)
-
-👤 **Pamphile Mkp**
-
-- GitHub: [@githubhandle](https://github.com/pamphilemkp)
-- Twitter:[@pamphilemkp](https://Twitter.com/PamphileMusonda)
-- LinkedIn:[@pamphilemkp](https://www.linkedin.com/in/pamphile-musonda)
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
